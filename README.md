@@ -34,10 +34,10 @@ The UN Secretary-General's Addresses to the General Assembly and opening remarks
 
 For 2020, due to the richness of content in comparison to other speeches, the opening remarks for the General Assembly were obtained from the official website instead of the address. The speech files are saved into unsg_speeches folder in the data directory.
 
-## Directory Structure
+# Directory Structure
 
 The directory structure excluding the `cache` folder in `code` and `TXT` folder in `data` directory is provided below. The aforementioned files were omitted due to having a large number of contents.
-
+```
 values_pipeline/
 ├── README.md                          # how to reproduce core results
 ├── code/
@@ -54,10 +54,10 @@ values_pipeline/
 │       ├── figures/                   # final PNGs used in the paper
 │       └── tables/                    # final .tex tables used in the paper
 └── requirements.txt                   # runtime dependencies
-
+```
 For transparency and reproducibility, the full directory structure can be generated automatically. Execute print_folder_tree.py from master_code.ipynb (located in code/master_code_prep/) to produce the complete project tree.
 
-## Computing Environment and Package Requirements
+# Computing Environment and Package Requirements
 
 Model training was GPU-accelerated using an NVIDIA GeForce RTX 3070 Ti Laptop GPU under CUDA. CPU-only replication is fully possible but substantially slower. All analyses were executed in Python 3.10.16.
 
@@ -98,7 +98,7 @@ warnings
 
 # Instructions
 
-1. After downloading the datasets or ensuring that the data files exist in the directory, please run "values_pipeline\code\master_code_prep\master_code.ipynb" first and then run the following .ipynb files, in order:
+- After downloading the datasets or ensuring that the data files exist in the directory, please run "values_pipeline\code\master_code_prep\master_code.ipynb" first and then run the following .ipynb files, in order:
 
 values_pipeline\code\question_pipelines\q8_pipeline\master_q8.ipynb
 values_pipeline\code\question_pipelines\q11_pipeline\master_q11.ipynb
@@ -113,7 +113,7 @@ values_pipeline\code\question_pipelines\q69_pipeline\master_country_year_fe_expe
 
 You may check the output files in the output directory. You may also get further insights on which criteria were considered for domain adaptations from surveys to speeches from each question-specific directory.
 
-2. After having run the code for the questions, please run the following code to acquire the figures and tables used in the research. 
+- After having run the code for the questions, please run the following code to acquire the figures and tables used in the research. 
 
 values_pipeline\code\visuals_pipeline\master_visuals.ipynb
 
