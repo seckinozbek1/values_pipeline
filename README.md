@@ -1,4 +1,4 @@
-This pipeline was prepared for the empirical study titled "Values in UN General Debate Speeches" by Seckin Ozbek, which was based on the final master's dissertation in Applied Social Data Science programme at the London School of Economics and Political Science in August 2025.  
+This pipeline was prepared for the empirical study titled *"Values in UN General Debate Speeches"* by Seckin Ozbek, which was based on the final master's dissertation in Applied Social Data Science programme at the London School of Economics and Political Science in August 2025.  
 
 # Data
 
@@ -6,15 +6,15 @@ For demonstration purposes, the required subfolders in downloaded datasets were 
 
 ## UNGD Corpus and Metadata
 
-To analyze the UN General Debate Speeches, the text corpus of Jankin et al. (2025) was used. Hence, in order to replicate the analyses in this study, please first download the corpus from the following link and extract the UNGDC_1946-2024.tar file in the data directory and process the TXT file folder for the analysis:
+To analyze the UN General Debate Speeches, the text corpus of Jankin et al. (2025) was used. Hence, in order to replicate the analyses in this study, please first download the corpus from the following link and extract the `UNGDC_1946-2024.tar` file in the data directory and process the TXT file folder for the analysis:
 
 https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/0TJX8Y
 
-To acquire the speaker metadata, please download the Speakers_by_session.xlsx excel file into the data directory using the same link.
+To acquire the speaker metadata, please download the `Speakers_by_session.xlsx` excel file into the `data` directory using the same link.
 
 ## WVS Wave 7 Dataset
 
-In order to acquire the Wave 7 Dataset, please download WVS Cross-National Wave 7 R v6 0.zip (rdata) from the following link and save into the data directory: 
+In order to acquire the Wave 7 Dataset, please download `WVS Cross-National Wave 7 R v6 0.zip (rdata)` from the following link and save into the `data` directory: 
 
 https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp
 
@@ -24,7 +24,7 @@ The WVC corpus sentences are obtained from the supplementary materials of the st
 
 https://aclanthology.org/2024.lrec-main.1195/
 
-Please download the .csv file in the following path into the data directory:
+Please download the `.csv` file in the following path into the data directory:
 
 "2024.lrec-main.1195.OptionalSupplementaryMaterial/RVR_SUPPLEMENT_COLING_2024/data/WVC/WVC_stem_encoding.csv"
 
@@ -32,7 +32,7 @@ Please download the .csv file in the following path into the data directory:
 
 The UN Secretary-General's Addresses to the General Assembly and opening remarks between the years 2017 and 2022 were taken from the UN's official website (United Nations, 2017, 2018, 2019, 2020, 2021, 2022).
 
-For 2020, due to the richness of content in comparison to other speeches, the opening remarks for the General Assembly were obtained from the official website instead of the address. The speech files are saved into unsg_speeches folder in the data directory.
+For 2020, due to the richness of content in comparison to other speeches, the opening remarks for the General Assembly were obtained from the official website instead of the address. The speech files are saved into `unsg_speeches` folder in the `data` directory.
 
 # Directory Structure
 
@@ -55,14 +55,14 @@ values_pipeline/
 │       └── tables/                    # final .tex tables used in the paper
 └── requirements.txt                   # runtime dependencies
 ```
-For transparency and reproducibility, the full directory structure can be generated automatically. Execute print_folder_tree.py from master_code.ipynb (located in code/master_code_prep/) to produce the complete project tree.
+For transparency and reproducibility, the full directory structure can be generated automatically. Execute `print_folder_tree.py` from `master_code.ipynb` (located in `code/master_code_prep/`) to produce the complete project tree.
 
 # Computing Environment and Package Requirements
 
 Model training was GPU-accelerated using an NVIDIA GeForce RTX 3070 Ti Laptop GPU under CUDA. CPU-only replication is fully possible but substantially slower. All analyses were executed in Python 3.10.16.
 
-Please install the packages mentioned in requirements.txt file in the main directory before replication. For ease of reference, the requirements list is also provided below:
-
+Please install the packages mentioned in `requirements.txt` file in `code/master_code_prep` directory before replication. For ease of reference, the requirements list is also provided below:
+```
 IPython
 ast
 catboost
@@ -95,31 +95,32 @@ traceback
 transformers
 umap
 warnings
-
+```
 # Instructions
 
-- After downloading the datasets or ensuring that the data files exist in the directory, please run "values_pipeline\code\master_code_prep\master_code.ipynb" first and then run the following .ipynb files, in order:
+- After downloading the datasets or ensuring that the data files exist in the directory, please run "values_pipeline\code\master_code_prep\master_code.ipynb" first and then run the following `.ipynb` files, in order:
 
-values_pipeline\code\question_pipelines\q8_pipeline\master_q8.ipynb
-values_pipeline\code\question_pipelines\q11_pipeline\master_q11.ipynb
-values_pipeline\code\question_pipelines\q17_pipeline\master_q17.ipynb
-values_pipeline\code\question_pipelines\q65_pipeline\master_q65.ipynb
-values_pipeline\code\question_pipelines\q69_pipeline\master_q69.ipynb
-values_pipeline\code\question_pipelines\q70_pipeline\master_q70.ipynb
-values_pipeline\code\question_pipelines\q152_q153_pipeline\master_q152_q153.ipynb
-values_pipeline\code\question_pipelines\q154_q155_pipeline\master_q154_q155.ipynb
-values_pipeline\code\question_pipelines\q8_pipeline\master_country_year_fe_experiments.ipynb
-values_pipeline\code\question_pipelines\q69_pipeline\master_country_year_fe_experiments.ipynb
-
-You may check the output files in the output directory. You may also get further insights on which criteria were considered for domain adaptations from surveys to speeches from each question-specific directory.
+    ```
+    values_pipeline\code\question_pipelines\q8_pipeline\master_q8.ipynb
+    values_pipeline\code\question_pipelines\q11_pipeline\master_q11.ipynb
+    values_pipeline\code\question_pipelines\q17_pipeline\master_q17.ipynb
+    values_pipeline\code\question_pipelines\q65_pipeline\master_q65.ipynb
+    values_pipeline\code\question_pipelines\q69_pipeline\master_q69.ipynb
+    values_pipeline\code\question_pipelines\q70_pipeline\master_q70.ipynb
+    values_pipeline\code\question_pipelines\q152_q153_pipeline\master_q152_q153.ipynb
+    values_pipeline\code\question_pipelines\q154_q155_pipeline\master_q154_q155.ipynb
+    values_pipeline\code\question_pipelines\q8_pipeline\master_country_year_fe_experiments.ipynb
+    values_pipeline\code\question_pipelines\q69_pipeline\master_country_year_fe_experiments.ipynb
+    ```
+    You may check the output files in the output directory. You may also get further insights on which criteria were considered for domain adaptations from surveys to speeches from each question-specific directory.
 
 - After having run the code for the questions, please run the following code to acquire the figures and tables used in the research. 
+    ```
+    values_pipeline\code\visuals_pipeline\master_visuals.ipynb
+    ```
+The figures and tables will be saved into the `visuals_pipeline_output` folder in the `output` directory. 
 
-values_pipeline\code\visuals_pipeline\master_visuals.ipynb
-
-The figures and tables are saved within the visuals_pipeline_output folder in the output directory. 
-
-**Note:** The only non-replicable output is the case of the confounding for Q69, which could not be replicated in further runs due to initial non-deterministic structure of the code. The visuals and rescued metrics could be found in the confounded_q69 folder in the output directory. 
+**Note:** The only non-replicable output is the case mentioned as the confounded metrics for Q69 of the WVS, which could not be replicated in further runs due to initial non-deterministic structure of the code. The visuals and rescued metrics for this could be found in the `confounded_q69` folder in the `output` directory. 
 
 # References: 
 
