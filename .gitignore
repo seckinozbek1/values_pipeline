@@ -1,26 +1,54 @@
-# Ignore everything inside data and output folders
-data/**
-output/**
+# ===============================
+# DATA FOLDERS
+# ===============================
 
-# But keep the folder structure itself
+# Ignore everything in data but keep folder structure
+data/**
+
+# Keep folder structure itself
 !data/
-!output/
+!data/*/
+!data/*/*/
+
+# Keep contents of labeled_data and unsg_speeches only
+!data/labeled_data/**
+!data/unsg_speeches/**
 
 # Allow placeholder files
 !data/.keep
+
+# ===============================
+# OUTPUT FOLDERS
+# ===============================
+
+# Ignore everything in output but keep structure
+output/**
+
+# Keep folder structure itself
+!output/
+!output/*/
+!output/*/*/
+
+# Keep contents of confounded_q69 in visuals_pipeline_output
+!output/visuals_pipeline_output/confounded_q69/**
 !output/.keep
 
-# Ignore large model + processed artifacts
+# ===============================
+# LARGE ARTIFACTS
+# ===============================
+
 **/*.cbm
 **/*.pkl
 **/*.pt
 **/*.bin
 **/*.npy
 **/*.h5
-**/*.csv
 **/*.tsv
 
-# Standard ignore rules
+# ===============================
+# STANDARD IGNORE RULES
+# ===============================
+
 __pycache__/
 .ipynb_checkpoints/
 .DS_Store
