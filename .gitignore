@@ -2,34 +2,34 @@
 # DATA FOLDERS
 # ===============================
 
-# Ignore everything in data but keep folder structure
+# Ignore all files in data
 data/**
 
-# Keep folder structure itself
+# Keep data folder and all subfolder names
 !data/
 !data/*/
 !data/*/*/
 
-# Keep contents of labeled_data and unsg_speeches only
+# Keep contents only for labeled_data and unsg_speeches
 !data/labeled_data/**
 !data/unsg_speeches/**
 
-# Allow placeholder files
+# Allow placeholders (e.g. .keep files)
 !data/.keep
 
 # ===============================
 # OUTPUT FOLDERS
 # ===============================
 
-# Ignore everything in output but keep structure
+# Ignore all files in output
 output/**
 
-# Keep folder structure itself
+# Keep all folder names (so structure shows on GitHub)
 !output/
 !output/*/
 !output/*/*/
 
-# Keep contents of confounded_q69 in visuals_pipeline_output
+# Keep contents only for confounded_q69
 !output/visuals_pipeline_output/confounded_q69/**
 !output/.keep
 
@@ -44,6 +44,7 @@ output/**
 **/*.npy
 **/*.h5
 **/*.tsv
+**/*.csv
 
 # ===============================
 # STANDARD IGNORE RULES
