@@ -1,0 +1,19 @@
+{
+  "final_macro_f1": 0.7543859649122806,
+  "classification_report": [
+    {
+      "class": "Q11_2",
+      "precision": 0.7272727272727273,
+      "recall": 1.0,
+      "f1_score": 0.8421052631578947,
+      "support": 8
+    },
+    {
+      "class": "Q11_1",
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1_score": 0.6666666666666666,
+      "support": 6
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+# Ignore everything inside data and output folders
+data/**
+output/**
+
+# But keep the folder structure itself
+!data/
+!output/
+
+# Allow placeholder files
+!data/.keep
+!output/.keep
+
+# Ignore large model + processed artifacts
+**/*.cbm
+**/*.pkl
+**/*.pt
+**/*.bin
+**/*.npy
+**/*.h5
+**/*.csv
+**/*.tsv
+
+# Standard ignore rules
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store

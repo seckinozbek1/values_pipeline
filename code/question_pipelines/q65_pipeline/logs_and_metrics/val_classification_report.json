@@ -1,0 +1,33 @@
+{
+  "final_macro_f1": 0.6939102564102563,
+  "classification_report": [
+    {
+      "class": "Q65_1",
+      "precision": 0.6666666666666666,
+      "recall": 0.8571428571428571,
+      "f1_score": 0.75,
+      "support": 7
+    },
+    {
+      "class": "Q65_2",
+      "precision": 0.75,
+      "recall": 0.6,
+      "f1_score": 0.6666666666666666,
+      "support": 5
+    },
+    {
+      "class": "Q65_3",
+      "precision": 0.6,
+      "recall": 0.8181818181818182,
+      "f1_score": 0.6923076923076923,
+      "support": 11
+    },
+    {
+      "class": "Q65_4",
+      "precision": 0.875,
+      "recall": 0.5384615384615384,
+      "f1_score": 0.6666666666666666,
+      "support": 13
+    }
+  ]
+}
