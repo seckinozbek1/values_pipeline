@@ -1,4 +1,4 @@
-This pipeline was prepared for the empirical study titled *"Values in UN General Debate Speeches"* by Seckin Ozbek, which was based on the final master's dissertation in Applied Social Data Science programme at the London School of Economics and Political Science in August 2025.  
+This pipeline was prepared for the empirical study titled *"Values in UN General Debate Speeches"* by Seckin Ozbek, which was based on the final Master's dissertation in Applied Social Data Science programme at the London School of Economics and Political Science in August 2025.  
 
 # Data
 
@@ -144,3 +144,9 @@ The figures and tables will be saved into the `visuals_pipeline_output` folder i
 
 - United Nations. (2022, September 20). Secretary-General’s address to the General Assembly. https://www.un.org/sg/en/content/sg/statement/2022-09-20/secretary-generals-address-the-general-assembly-trilingual-delivered-follows-scroll-further-down-for-all-english-and-all-french
 
+# Citation
+
+If you use this pipeline, please cite:
+> Ozbek, Seckin (2025). *Values in UN General Debate Speeches*. MSc Dissertation, London School of Economics and Political Science.
+
+When the journal version becomes available, please update the citation accordingly.
