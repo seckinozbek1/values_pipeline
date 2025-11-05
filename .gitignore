@@ -42,6 +42,9 @@ output/**
 **/*.h5
 **/*.tsv
 **/*.csv
+**/*.Rmd
+**/*.aux
+**/*.pdf
 
 # Re-allow CSVs in labeled_data
 !data/labeled_data/**/*.csv
