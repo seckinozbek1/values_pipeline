@@ -55,7 +55,9 @@ values_pipeline/
 │       └── tables/                    # final .tex tables used in the paper
 └── requirements.txt                   # runtime dependencies
 ```
-For transparency and reproducibility, the full directory structure can be generated automatically. Execute `print_folder_tree.py` from `master_code.ipynb` (located in `code/master_code_prep/`) to produce the complete project tree.
+For transparency and reproducibility, the full directory structure can be generated automatically. Execute `print_folder_tree.py` from `master_code.ipynb` (located in `code/master_code_prep/`) to produce the complete project tree after downloading and placing the aforementioned data files.
+
+Even if some folders containing data or generated artifacts were removed for size concerns, their structure has been preserved. To maintain the intended directory hierarchy in order to signal the designated places for the each folder, a .keep placeholder was placed in every folder excluded via `.gitignore.`
 
 # Computing Environment and Package Requirements
 
