@@ -10,7 +10,7 @@ data/**
 !data/*/
 !data/*/*/
 
-# Keep labeled_data and unsg_speeches contents (training data and raw texts)
+# Keep contents of labeled_data (training data) and unsg_speeches (raw text)
 !data/labeled_data/**
 !data/unsg_speeches/**
 
@@ -21,19 +21,19 @@ data/**
 # Ignore all files in output
 output/**
 
-# Keep folder structure (visible on GitHub)
+# Keep folder structure visible on GitHub
 !output/
 !output/*/
 !output/*/*/
 
-# Keep confounded_q69 results
+# Keep specific results
 !output/visuals_pipeline_output/confounded_q69/**
 
 # ===============================
 # LARGE / GENERATED ARTIFACTS
 # ===============================
 
-# Ignore heavy data and model outputs
+# Ignore heavy artifacts and intermediate files
 **/*.cbm
 **/*.pkl
 **/*.pt
@@ -41,6 +41,11 @@ output/**
 **/*.npy
 **/*.h5
 **/*.tsv
+
+# Keep labeled_data CSVs (explicitly allow them)
+!data/labeled_data/**/*.csv
+
+# Ignore all other CSVs
 **/*.csv
 
 # ===============================
