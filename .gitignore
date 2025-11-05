@@ -1,8 +1,39 @@
 # ===============================
-# LARGE ARTIFACTS AND FORMATS
+# DATA FOLDERS
 # ===============================
 
-# Ignore all heavy or unwanted file types first
+# Ignore all files in data
+data/**
+
+# Keep folder structure
+!data/
+!data/*/
+!data/*/*/
+
+# Keep labeled_data and unsg_speeches contents (training data and raw texts)
+!data/labeled_data/**
+!data/unsg_speeches/**
+
+# ===============================
+# OUTPUT FOLDERS
+# ===============================
+
+# Ignore all files in output
+output/**
+
+# Keep folder structure (visible on GitHub)
+!output/
+!output/*/
+!output/*/*/
+
+# Keep confounded_q69 results
+!output/visuals_pipeline_output/confounded_q69/**
+
+# ===============================
+# LARGE / GENERATED ARTIFACTS
+# ===============================
+
+# Ignore heavy data and model outputs
 **/*.cbm
 **/*.pkl
 **/*.pt
@@ -13,42 +44,16 @@
 **/*.csv
 
 # ===============================
-# DATA FOLDERS
-# ===============================
-
-# Ignore everything in data
-data/**
-
-# Keep folder structure
-!data/
-!data/*/
-!data/*/*/
-
-# Keep everything inside labeled_data and unsg_speeches
-!data/labeled_data/**
-!data/unsg_speeches/**
-
-# Explicitly re-allow CSVs inside labeled_data (this line is essential)
-!data/labeled_data/**/*.csv
-
-# Allow placeholders
-!data/.keep
-
-# ===============================
-# OUTPUT FOLDERS
-# ===============================
-
-output/**
-!output/
-!output/*/
-!output/*/*/
-!output/visuals_pipeline_output/confounded_q69/**
-!output/.keep
-
-# ===============================
 # STANDARD IGNORE RULES
 # ===============================
 
 __pycache__/
 .ipynb_checkpoints/
 .DS_Store
+
+# ===============================
+# PLACEHOLDER FILES
+# ===============================
+
+# Always track .keep files to preserve empty folders
+!**/.keep
