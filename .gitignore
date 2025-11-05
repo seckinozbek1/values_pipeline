@@ -1,45 +1,8 @@
 # ===============================
-# DATA FOLDERS
+# LARGE ARTIFACTS AND FORMATS
 # ===============================
 
-# Ignore all files in data
-data/**
-
-# Keep data folder and all subfolder names
-!data/
-!data/*/
-!data/*/*/
-
-# Keep contents only for labeled_data and unsg_speeches
-!data/labeled_data/**
-!data/unsg_speeches/**
-
-# Explicitly allow CSVs inside labeled_data (override global CSV ignore)
-!data/labeled_data/**/*.csv
-
-# Allow placeholders (e.g. .keep files)
-!data/.keep
-
-# ===============================
-# OUTPUT FOLDERS
-# ===============================
-
-# Ignore all files in output
-output/**
-
-# Keep all folder names (so structure shows on GitHub)
-!output/
-!output/*/
-!output/*/*/
-
-# Keep contents only for confounded_q69
-!output/visuals_pipeline_output/confounded_q69/**
-!output/.keep
-
-# ===============================
-# LARGE ARTIFACTS
-# ===============================
-
+# Ignore all heavy or unwanted file types first
 **/*.cbm
 **/*.pkl
 **/*.pt
@@ -48,6 +11,39 @@ output/**
 **/*.h5
 **/*.tsv
 **/*.csv
+
+# ===============================
+# DATA FOLDERS
+# ===============================
+
+# Ignore everything in data
+data/**
+
+# Keep folder structure
+!data/
+!data/*/
+!data/*/*/
+
+# Keep everything inside labeled_data and unsg_speeches
+!data/labeled_data/**
+!data/unsg_speeches/**
+
+# Explicitly re-allow CSVs inside labeled_data (this line is essential)
+!data/labeled_data/**/*.csv
+
+# Allow placeholders
+!data/.keep
+
+# ===============================
+# OUTPUT FOLDERS
+# ===============================
+
+output/**
+!output/
+!output/*/
+!output/*/*/
+!output/visuals_pipeline_output/confounded_q69/**
+!output/.keep
 
 # ===============================
 # STANDARD IGNORE RULES
