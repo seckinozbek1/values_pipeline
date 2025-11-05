@@ -2,7 +2,7 @@
 # DATA FOLDERS
 # ===============================
 
-# Ignore all files in data
+# Ignore everything in data
 data/**
 
 # Keep folder structure
@@ -10,7 +10,7 @@ data/**
 !data/*/
 !data/*/*/
 
-# Keep contents of labeled_data (training data) and unsg_speeches (raw text)
+# Keep labeled_data and unsg_speeches contents
 !data/labeled_data/**
 !data/unsg_speeches/**
 
@@ -33,7 +33,7 @@ output/**
 # LARGE / GENERATED ARTIFACTS
 # ===============================
 
-# Ignore heavy artifacts and intermediate files
+# Ignore heavy artifacts everywhere else
 **/*.cbm
 **/*.pkl
 **/*.pt
@@ -41,12 +41,10 @@ output/**
 **/*.npy
 **/*.h5
 **/*.tsv
-
-# Keep labeled_data CSVs (explicitly allow them)
-!data/labeled_data/**/*.csv
-
-# Ignore all other CSVs
 **/*.csv
+
+# Re-allow CSVs in labeled_data
+!data/labeled_data/**/*.csv
 
 # ===============================
 # STANDARD IGNORE RULES
@@ -60,5 +58,5 @@ __pycache__/
 # PLACEHOLDER FILES
 # ===============================
 
-# Always track .keep files to preserve empty folders
+# Always track .keep files
 !**/.keep
