@@ -28,7 +28,7 @@ for qid in unique_qids:
         (df_qid['total_score'] <= upper_bound)
     ]
 
-    print(f"broad_qid: {qid} - Selected {len(iqr_samples)} uncertain samples for annotation.")
+    print(f"broad_qid: {qid} - Selected {len(iqr_samples)} IQR-range candidate samples for annotation.")
 
     # Save to CSV file inside the iqr_samples subfolder
     output_file = os.path.join(IQR_SAMPLES_DIR, f"{qid}_iqr_samples.csv")
